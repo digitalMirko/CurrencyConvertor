@@ -6,8 +6,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 public class MainActivity extends AppCompatActivity {
 
     public void btnClicked(View view){
