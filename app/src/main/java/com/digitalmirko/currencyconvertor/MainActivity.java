@@ -6,20 +6,23 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     public void btnClicked(View view){
 
+        // U.S. Dollar amount added in by user
         EditText dollarsTextEdit = (EditText) findViewById(R.id.dollarsTextEdit);
 
-        // Current exchange rate of US Dollar to British Pound 12.21.2016
+        // Currents exchange rate of US Dollar to British Pound 12.21.2016
         double poundsUK = Double.parseDouble(dollarsTextEdit.getText().toString())  * 0.809185;
-
 
         // testing typed in entry to Toast Message
 //        Toast.makeText(MainActivity.this, dollarsTextEdit.getText().toString(), Toast.LENGTH_SHORT).show();
 
-        Toast.makeText(MainActivity.this,"GBP " + poundsUK, Toast.LENGTH_SHORT).show();
+        // Pops up Toast message box with GBP in 2 place decimal format answer
+        Toast.makeText(MainActivity.this, String.format("GBP %.2f",poundsUK), Toast.LENGTH_SHORT).show();
     }
 
     @Override
