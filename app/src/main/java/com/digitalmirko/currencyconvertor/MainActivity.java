@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         // U.S. Dollar amount added in by user
         EditText dollarsTextEdit = (EditText) findViewById(R.id.dollarsTextEdit);
 
-        // Currents exchange rate of US Dollar to British Pound 12.21.2016
+        // Currents exchange rate of U.S. Dollars to British Pounds 12.21.2016
         double poundsUK = Double.parseDouble(dollarsTextEdit.getText().toString())  * 0.809185;
 
         // testing typed in entry to Toast Message
