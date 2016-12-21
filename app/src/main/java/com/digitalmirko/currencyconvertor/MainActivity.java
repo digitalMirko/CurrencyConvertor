@@ -12,9 +12,14 @@ public class MainActivity extends AppCompatActivity {
 
         EditText dollarsTextEdit = (EditText) findViewById(R.id.dollarsTextEdit);
 
+        // Current exchange rate of US Dollar to British Pound 12.21.2016
+        double poundsUK = Double.parseDouble(dollarsTextEdit.getText().toString())  * 0.809185;
+
 
         // testing typed in entry to Toast Message
-        Toast.makeText(MainActivity.this, dollarsTextEdit.getText().toString(), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(MainActivity.this, dollarsTextEdit.getText().toString(), Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(MainActivity.this,"GBP " + poundsUK, Toast.LENGTH_SHORT).show();
     }
 
     @Override
